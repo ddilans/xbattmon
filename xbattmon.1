@@ -1,0 +1,43 @@
+.Dd May 19, 2015
+.Dt XBATTMON 1
+.Os
+.Sh NAME
+.Nm xbattmon
+.Nd simple battery monitor
+.Sh SYNOPSIS
+.Nm xbattmon
+.Op Fl c Ar capacity
+.Op Fl p Ar bottom | top | left | right
+.Op Fl t Ar thickness
+.Op Fl v
+.Sh DESCRIPTION
+.Nm
+is a simple battery monitor.  By default
+.Nm
+will assume a battery capacity of 100%, a poll interval of 5 seconds,
+a bar thickness of 2 pixels and a bottom placement.
+.Sh OPTIONS
+.Bl -tag -width Ds
+.It Fl c Ar capacity
+Set the maximum battery capacity.
+.It Fl p Ar bottom | top | left | right
+Set the bar placement.
+.It Fl t Ar thickness
+Set the bar thickness.
+.It Fl v
+Show program version.
+.El
+.Sh CONFIGURATION
+You can tweak the colors
+.Nm
+will use by modifying `config.h' and recompiling the code.
+.Sh RATIONALE
+Some laptops either do not have a battery indicator or sometimes it is
+located on the back of the screen.  People who do not like to use status
+bars might find
+.Nm
+useful.
+.Sh PORTABILITY
+It currently works on DragonFly BSD, OpenBSD and Linux.
+.Sh AUTHORS
+.An Dimitris Papastamos Aq Mt sin@2f30.org .

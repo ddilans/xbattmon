@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case `uname` in
+OpenBSD)
+	ln -sf config.bsd.mk config.os.mk
+	;;
+DragonFly)
+	ln -sf config.dfly.mk config.os.mk
+	;;
+Linux)
+	ln -sf config.linux.mk config.os.mk
+	;;
+*)
+	echo Unsupported system 1>&2
+	;;
+esac

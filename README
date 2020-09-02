@@ -1,0 +1,5 @@
+fork of xbattmon to allow size less than screen size
+
+# ./configure
+# make
+# make install
